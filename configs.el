@@ -25,10 +25,27 @@
 
 ;; Set theme
 ;; (load-theme 'tango-dark)
-(load-theme 'catppuccin :no-confirm)
+(load-theme 'catppuccin t)
+
+;; Line numbers
+(column-number-mode)
+(global-display-line-numbers-mode t)
+
+;; Disable line numbers for some modes
+(dolist (mode '(term-mode-hook
+                shell-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type 'relative)
 
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; Git status
+(global-set-key (kbd "C-M-;") 'magit-status)
 
 ;; DO NOT MODIFY ANITHING BELOW THIS LINE
 

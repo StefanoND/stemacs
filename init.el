@@ -13,8 +13,8 @@
 (setq user-emacs-directory (concat user-home-directory "dotfiles/emacs/.stemacs.d/"))
 
 ;; load all .el files
-(load (locate-user-emacs-file "configs.el") nil :nomessage)
 (load (locate-user-emacs-file "packages.el") nil :nomessage)
+(load (locate-user-emacs-file "configs.el") nil :nomessage)
 (load (locate-user-emacs-file "custom.el") nil :nomessage)
 
 ;; DO NOT MODIFY ANITHING ABOVE THIS LINE
@@ -24,3 +24,16 @@
 ;; DO NOT MODIFY ANITHING BELOW THIS LINE
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(forge smartparens rainbow-mode rainbow-delimiters ivy doom-modeline command-log-mode cl-libify catppuccin-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
