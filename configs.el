@@ -4,6 +4,10 @@
 
 ;; DO NOT MODIFY ANITHING ABOVE THIS LINE
 
+(defvar stf/default-font-size 120)
+(defvar stf/fixed-font-size 120)
+(defvar stf/variable-font-size 120)
+
 ;; If using Chemacs2 and Native Compilation, uncomment this line
 (add-to-list 'native-comp-eln-load-path (expand-file-name "eln-cache/" user-emacs-directory))
 
@@ -20,8 +24,12 @@
 ;; Set up visible bell
 (setq visible-bell t)
 
-;; Set font
-(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 120)
+;; Default font
+(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height stf/default-font-size)
+;; Default font
+(set-face-attribute 'fixed-pitch nil :font "FiraCode Nerd Font Mono" :height stf/fixed-font-size)
+;; Default font
+(set-face-attribute 'variable-pitch nil :font "Iosevka Nerd Font" :height stf/variable-font-size :weight 'regular)
 
 ;; Set theme
 ;; (load-theme 'tango-dark)

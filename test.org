@@ -1,0 +1,65 @@
+* Hello world
+
+* Inserted heading first
+
+1. One
+
+2. Two
+
+   1. SREE
+      
+      1. Four 
+
+   2. Nossing rong with me 
+
+3. Something's gotta give
+
+     [[https://github.com/StefanoND][Some content]]
+
+     | Name             | Age | Uses Emacs |
+     | Stefano          |  20 | No         |
+     | Alexander        |     |            |
+     |                  |     |            |
+     |                  |     |            |
+     | The Greater good |     |            |
+     |                  |     |            |
+
+   - [-] First Item
+     - [X] Second Item
+     - [ ] SecondTwo Item
+     - [-] Warudo
+       - [X] Third Item
+       - [ ] 
+       - [ ] 
+       - [ ] 
+       - [ ] ThirdTwo Item
+       - [X] ThirdThree Item
+   - [ ] Second
+   - [ ] Third
+
+** Sub-heading
+
+    Hello *sub*
+
+** Wow, you can really dance
+
+#+begin_src emacs-lisp
+    (defun my-elisp-func ()
+    (message "Hello!"))
+#+end_src
+
+* TODO This 
+
+* Insedted heading!
+
+#+begin_src cpp
+  #include <iostream>
+  int main()
+  {
+    std::cout << "Hello world" << std::endl;
+    return 0;
+  }
+#+end_src
+
+
+* Second heading
