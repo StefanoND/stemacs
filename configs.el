@@ -55,6 +55,9 @@
 ;; Git status
 (global-set-key (kbd "C-M-;") 'magit-status)
 
+;;
+(setq org-startup-indented t)
+
 ;; DO NOT MODIFY ANITHING BELOW THIS LINE
 
 (provide 'configs)

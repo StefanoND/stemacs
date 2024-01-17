@@ -1,1 +1,1 @@
-("~/dotfiles/emacs/.stemacs.d/")
+("~/dotfiles/emacs/.stemacs.d/" "~/dotfiles/")
