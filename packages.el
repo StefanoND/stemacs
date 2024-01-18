@@ -33,7 +33,9 @@
          ("C-x b" . counsel-ibuffer)
          ("C-x C-f" . counsel-find-file)
          :map minibuffer-local-map
-         ("C-r" . 'counsel-minibuffer-history)))
+         ("C-r" . 'counsel-minibuffer-history))
+  :config
+  (setq ivy-initial-inputs-alist nil)) ;; Don't start searches with "^"
 
 (use-package ivy
   :diminish
@@ -179,7 +181,17 @@
   :hook (org-mode . stf/org-mode-setup)
   :config
   (setq org-ellipsis " ▾"
-    org-hide-emphasis-markers t))
+	org-hide-emphasis-markers t)
+
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t)
+
+  (setq org-agenda-file
+	'("~/org/agenda.org"
+	  "/mnt/SSD_1TB_WORK/org/agenda.org"
+	  "/mnt/SSD_1TB_WORK/org/birthdays.org"
+	  "~/org/birthdays.org")))
 
 (use-package org-bullets
   :after org

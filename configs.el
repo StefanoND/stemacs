@@ -32,7 +32,6 @@
 (set-face-attribute 'variable-pitch nil :font "Iosevka Nerd Font" :height stf/variable-font-size :weight 'regular)
 
 ;; Set theme
-;; (load-theme 'tango-dark)
 (load-theme 'catppuccin t)
 
 ;; Line numbers
@@ -55,7 +54,6 @@
 ;; Git status
 (global-set-key (kbd "C-M-;") 'magit-status)
 
-;;
 (setq org-startup-indented t)
 
 ;; DO NOT MODIFY ANITHING BELOW THIS LINE
