@@ -4,9 +4,9 @@
 
 ;; DO NOT MODIFY ANITHING ABOVE THIS LINE
 
-(defvar stf/default-font-size 120)
-(defvar stf/fixed-font-size 120)
-(defvar stf/variable-font-size 120)
+(defvar stf/default-font-size 110)
+(defvar stf/fixed-font-size 110)
+(defvar stf/variable-font-size 110)
 
 ;; If using Chemacs2 and Native Compilation, uncomment this line
 (add-to-list 'native-comp-eln-load-path (expand-file-name "eln-cache/" user-emacs-directory))

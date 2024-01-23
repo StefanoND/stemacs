@@ -187,11 +187,17 @@
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
 
-  (setq org-agenda-file
-	'("~/org/agenda.org"
-	  "/mnt/SSD_1TB_WORK/org/agenda.org"
-	  "/mnt/SSD_1TB_WORK/org/birthdays.org"
-	  "~/org/birthdays.org")))
+  (setq org-directory "~/org/")
+  (setq org-agenda-file '("~/org/agenda.org"
+                          "~/org/notes.org"
+                          "~/org/tasks.org"
+                          "~/org/birthdays.org"))
+  (setq org-log-done 'time) ;; Timestamp when finish stuff
+  (setq org-log-done 'note) ;; Timestamp AND write note when finish stuff
+  (setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "WAIT(w)" "STRT(s)" "HOLD(h)" "IDEA(i)")
+                            (sequence "|" "DONE(d)" "CANCELLED(c)" "|" "KILL(k)")
+                            (sequence "|" "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
+                            (sequence "|" "OKAY(o)" "yes(y)" "|" "NO(n)"))))
 
 (use-package org-bullets
   :after org
@@ -243,5 +249,8 @@
   :hook (org-mode . stf/org-mode-visual-fill))
 
 ;; DO NOT MODIFY ANITHING BELOW THIS LINE
+
+;; (eval-when-compile
+;;  (require 'cl))
 
 (provide 'packages)
