@@ -197,7 +197,21 @@
   (setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "WAIT(w)" "STRT(s)" "HOLD(h)" "IDEA(i)")
                             (sequence "|" "DONE(d)" "CANCELLED(c)" "|" "KILL(k)")
                             (sequence "|" "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
-                            (sequence "|" "OKAY(o)" "yes(y)" "|" "NO(n)"))))
+                            (sequence "|" "OKAY(o)" "yes(y)" "|" "NO(n)")))
+  (setq org-tag-alist
+	'((:startupgroup)
+	  ;; Put mutually exclusive tags here
+	  (:endgroup)
+	  ("@errand" . ?E)
+	  ("@home" . ?H)
+	  ("@work" . ?W)
+	  ("agenda" . ?a)
+	  ("planning" . ?p)
+	  ("publish" . ?P)
+	  ("batch" . ?b)
+	  ("note" . ?n)
+	  ("idea" . ?i)
+	  )))
 
 (use-package org-bullets
   :after org
